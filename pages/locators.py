@@ -5,6 +5,11 @@ class MainPageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
 class LoginPageLocators(object):
     LOGIN_URL = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
@@ -23,3 +28,4 @@ class ProductPageLocators(object):
     CHECK_SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) > .alertinner strong")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main p")
+

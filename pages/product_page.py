@@ -18,12 +18,12 @@ class ProductPage(BasePage):
 
     # проверка наличия названия товара в корзине.
     def check_text_book_in_basket(self):
-        assert self.browser.find_element(*ProductPageLocators.CHECK_TEXT), "Alert of noun name" \
+        assert self.is_not_element_present(*ProductPageLocators.CHECK_TEXT), "Alert of noun name" \
                                                                                       "is not presented"
 
     # проверка наличия цены товара.
     def check_product_price_in_basket(self):
-        assert self.is_element_present(*ProductPageLocators.CHECK_PRICE), "Alert with price is not presented"
+        assert self.is_not_element_present(*ProductPageLocators.CHECK_PRICE), "Alert with price is not presented"
 
     def success_message_should_be_dissapeared(self):
         assert self.is_disappeared(*ProductPageLocators.CHECK_SUCCESS_MESSAGE), \
@@ -39,5 +39,6 @@ class ProductPage(BasePage):
             "Price of product in the cart is not the same as the actual product price"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.CHECK_SUCCESS_MESSAGE),\
+        assert self.is_not_element_present(*ProductPageLocators.CHECK_TEXT), \
             "Success message is presented, but should not be"
+
