@@ -8,6 +8,7 @@ class MainPageLocators(object):
 class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, "header a.btn.btn-default")
 
 
 class LoginPageLocators(object):
@@ -29,3 +30,7 @@ class ProductPageLocators(object):
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main p")
 
+
+class CartPageLocators(object):
+    ITEMS_IN_CART_MESSAGE = (By.CSS_SELECTOR, ".basket-title .col-sm-6")
+    NO_ITEMS_IN_CART_MESSAGE = (By.CSS_SELECTOR, ".content #content_inner>p")
