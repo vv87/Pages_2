@@ -9,7 +9,7 @@ LINK = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-s
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_cart(browser):
+def test_guest_can_add_product_to_basket(browser):
     page = ProductPage(browser, LINK)
     page.open()
     page.add_to_the_cart()
@@ -27,7 +27,7 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
 
 
 @pytest.mark.need_review    
-def test_guest_cant_see_product_in_cart_opened_from_product_page(browser):
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page = ProductPage(browser, LINK)
     page.open()
     page.go_to_cart_page()
@@ -61,7 +61,7 @@ class TestUserAddToCartFromProductPage(object):
         self.browser = browser
 
     @pytest.mark.need_review 
-    def test_user_can_add_product_to_cart(self):
+    def test_user_can_add_product_to_basket(self):
         page = ProductPage(self.browser, LINK)
         page.open()
         page.add_to_the_cart()
